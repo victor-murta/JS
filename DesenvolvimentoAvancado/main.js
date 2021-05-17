@@ -30,33 +30,33 @@ obj.showContent();
 
 // default funciton args
 
-function randomNumber(){
-    return Math.round(Math.random() * 10);
-}
+// function randomNumber(){
+//     return Math.round(Math.random() * 10);
+// }
 
-function multiply(a, b = /*1*/ /*a*/ randomNumber()){
-    //caso b não seja passado
-    //b = b || 1;
-    // b = typeof b === undefined ? 1 : b;
-    // if ( typeof b === undefined){
-    //     b = 1;
-    // }
-    console.log(a * b);
-}
+// function multiply(a, b = /*1*/ /*a*/ randomNumber()){
+//     //caso b não seja passado
+//     //b = b || 1;
+//     // b = typeof b === undefined ? 1 : b;
+//     // if ( typeof b === undefined){
+//     //     b = 1;
+//     // }
+//     console.log(a * b);
+// }
 
-// multiply(5);  // 0 é convertido para o false
+// // multiply(5);  // 0 é convertido para o false
 
 
-var obj = {
-    // sum : function sum(a, b){
-    //     console.log( a + b);
-    // }
+// var obj = {
+//     // sum : function sum(a, b){
+//     //     console.log( a + b);
+//     // }
 
-    sum(a, b){
-        console.log(a + b);
-    }
+//     sum(a, b){
+//         console.log(a + b);
+//     }
 
-};
+// };
 
 // obj.sum(1, 5);
 
@@ -103,9 +103,70 @@ var obj = {
 // Introdução a generators
 
 
-const uniqueId = Symbol('Testando'); //identificador 
+// const uniqueId = Symbol('Testando'); //identificador 
+
+// /*
+// Symbol.iterator
+// Symbol.split
+// Symbol.toStringTag
+// */
+
+// const obj = {
+//     values: [1,2,3,4],
+//     [Symbol.iterator]() {
+//         let i =0 ;
+
+//         return {
+//             next: () => {
+//                 i++;
+//                 return {
+//                     value: this.values[i - 1],
+//                     done: i > this.values.length
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// const it = obj[Symbol.iterator]();
+
+// // for (let value of obj){
+// //     console.log(value);
+// // }
+
+// const arr2 = [...obj];
+// console.log(arr2);
 
 
-console.log(uniqueId);
+// Generators
 
+// function* hello(){
+//     console.log('Hello');
+//     yield 1;
+
+//     console.log('From');
+//     const value = yield 2;
+
+//     console.log(value);
+// }
+
+// const it = hello();
+
+// console.log(it.next());
+// console.log(it.next());
+// console.log(it.next('Outside'));
+
+
+function* naturalNumbers(){
+    let number = 0;
+    while(true){
+        yield number;
+        number++;
+    }
+}
+
+const it = naturalNumbers();
+
+console.log(it.next());
+console.log(it.next());
 
