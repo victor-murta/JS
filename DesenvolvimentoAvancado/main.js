@@ -239,12 +239,48 @@ obj.showContent();
 
 //Mocha, Chai, Sinon
 
+//   Tratamenot de erros
 
 
+// class CustomError extends Error{
+//     constructor({message, data}){
+//         super(message);
+//         this.data = data
+//     }
+// }
+
+// try{
+//     const name = "Victor Murta";
+
+//     const error = new CustomError({
+//         message: 'Mensagem de erro Customizada',
+//         data: {
+//             type: 'Server error'
+//         }
+//     });
+//     throw error;
+// }catch(err){
+//     console.log('EERRRRROOOOOUUUUU', err);
+// }finally{
+//     console.log('Vida que segue');
+// }
 
 
+// DEBUGGING
+
+// console.group('My group');
+// console.log('P1');
+// console.log('P2');
+// console.groupEnd('My group');
 
 
+// console.time('Log time');
+// setTimeout(() => {
+//     console.timeEnd('Log time');
+// }, 2000);
 
+// console.table(['Victor Murta Garcia', 'Testando rapá'])
 
+// console.assert(1 === 2, 'ops')
 
+console.log('%c styled log', 'color:blue; font-size: 50px;');
