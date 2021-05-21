@@ -28,6 +28,9 @@ var obj = {
 obj.showContent();
 */
 
+
+// const { resolve } = require("node:path")
+
 // default funciton args
 
 // function randomNumber(){
@@ -157,16 +160,91 @@ obj.showContent();
 // console.log(it.next('Outside'));
 
 
-function* naturalNumbers(){
-    let number = 0;
-    while(true){
-        yield number;
-        number++;
-    }
-}
+// function* naturalNumbers(){
+//     let number = 0;
+//     while(true){
+//         yield number;
+//         number++;
+//     }
+// }
 
-const it = naturalNumbers();
+// const it = naturalNumbers();
 
-console.log(it.next());
-console.log(it.next());
+// console.log(it.next());
+// console.log(it.next());
+
+
+// Promisses e Fetch
+
+//promise  = Pending(executando), fulfilled(terminou de executar), rejected
+
+// const doSomethingPromise = new Promise((resolve, reject) => {
+//     setTimeout(function() {
+//         resolve('First data');
+//     }, 1000);
+// });
+
+// doSomethingPromise.then(data => console.log(data));
+
+// fetch('http://localhost:8080/data.json')
+//     .then(responseStream => {
+//         responseStream.json()
+//     })
+//     .catch(err => {
+//         console.log('ERROR: ', err)
+//     });
+
+
+//promisses
+
+// const asyncTimer = () => new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve('Data');
+//     }, 1000)
+// })
+
+// const simpleFuncion = async () => {
+//     // throw new Error('Oh no');
+//     const data = await asyncTimer();
+//     return data;
+// }
+
+// // console.log(simpleFuncion());
+
+// simpleFuncion()
+//     .then(data => console.log(data))
+//     .catch(err => console.log(err))
+
+//EventEmmiter (node)
+
+// const EventEmmiter =require('events');
+
+
+// class Users extends EventEmmiter{
+//     userLogged(data){
+//         this.emit('User logged', data);
+//     }
+// }
+
+// const users = new Users();
+
+// users.on('user logged', data => {
+//     console.log(data);
+// })
+
+// users.userLogged({user: 'Victor Murta'});
+
+
+//testes automatizados 
+
+//Mocha, Chai, Sinon
+
+
+
+
+
+
+
+
+
 
